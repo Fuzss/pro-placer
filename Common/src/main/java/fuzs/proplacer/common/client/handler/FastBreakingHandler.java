@@ -1,7 +1,6 @@
-package fuzs.proplacer.client.handler;
+package fuzs.proplacer.common.client.handler;
 
-import fuzs.proplacer.mixin.client.accessor.MultiPlayerGameModeAccessor;
-import fuzs.puzzleslib.api.event.v1.core.EventResult;
+import fuzs.puzzleslib.common.api.event.v1.core.EventResult;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Options;
@@ -32,12 +31,11 @@ public class FastBreakingHandler extends AbstractFastBlockHandler {
     protected void tickWhenActive(Minecraft minecraft) {
         // we run at the beginning of the client tick, so this is not updated yet
         // there does not seem to exist a better hook after this is updated, but before keybindings are processed
-        minecraft.gameRenderer.pick(1.0F);
+        minecraft.pick(1.0F);
         if (minecraft.hitResult != null && minecraft.hitResult.getType() == HitResult.Type.BLOCK
                 && ((BlockHitResult) minecraft.hitResult).getBlockPos().equals(this.getTargetPosition())) {
-
             // ignore Minecraft::missTime, it does not apply for creative mode
-            ((MultiPlayerGameModeAccessor) minecraft.gameMode).proplacer$setDestroyDelay(0);
+            minecraft.gameMode.destroyDelay = 0;
         }
     }
 

@@ -1,8 +1,7 @@
-package fuzs.proplacer.client.handler;
+package fuzs.proplacer.common.client.handler;
 
-import fuzs.proplacer.client.util.BlockClippingHelper;
-import fuzs.proplacer.mixin.client.accessor.MinecraftAccessor;
-import fuzs.puzzleslib.api.event.v1.core.EventResultHolder;
+import fuzs.proplacer.common.client.util.BlockClippingHelper;
+import fuzs.puzzleslib.common.api.event.v1.core.EventResultHolder;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Options;
@@ -51,8 +50,8 @@ public class FastPlacementHandler extends AbstractFastBlockHandler {
 
     @Override
     protected void tickWhenActive(Minecraft minecraft) {
-        // always set this to default delay for blocking vanilla from running Minecraft::startUseItem
-        ((MinecraftAccessor) minecraft).proplacer$setRightClickDelay(4);
+        // Always set this to default delay for blocking vanilla from running Minecraft::startUseItem.
+        minecraft.rightClickDelay = 4;
         if (BlockClippingHelper.isBlockPositionInLine(minecraft.getCameraEntity(),
                 minecraft.player.blockInteractionRange(),
                 this.getTargetPosition())) {

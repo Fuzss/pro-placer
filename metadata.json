@@ -1,9 +1,10 @@
 {
+    "minecraft": "26.1.2",
     "mod": {
         "id": "proplacer",
         "group": "fuzs.proplacer",
         "name": "Pro Placer",
-        "version": "21.11.0",
+        "version": "26.1.0",
         "authors": [
             "Fuzs"
         ],
@@ -36,13 +37,13 @@
     ],
     "links": [
         {
-            "name": "github",
-            "slug": "proplacer"
-        },
-        {
             "name": "curseforge",
             "slug": "pro-placer",
             "id": "368320"
+        },
+        {
+            "name": "github",
+            "slug": "pro-placer"
         },
         {
             "name": "modrinth",

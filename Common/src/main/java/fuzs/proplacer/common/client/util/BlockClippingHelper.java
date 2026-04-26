@@ -1,4 +1,4 @@
-package fuzs.proplacer.client.util;
+package fuzs.proplacer.common.client.util;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;

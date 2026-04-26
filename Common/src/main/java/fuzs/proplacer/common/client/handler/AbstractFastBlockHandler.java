@@ -1,7 +1,7 @@
-package fuzs.proplacer.client.handler;
+package fuzs.proplacer.common.client.handler;
 
-import fuzs.proplacer.ProPlacer;
-import fuzs.proplacer.config.ClientConfig;
+import fuzs.proplacer.common.ProPlacer;
+import fuzs.proplacer.common.config.ClientConfig;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Options;

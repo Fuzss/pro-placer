@@ -5,9 +5,3 @@ plugins {
 dependencies {
     modCompileOnlyApi(sharedLibs.puzzleslib.common)
 }
-
-multiloader {
-    mixins {
-        clientAccessor("MinecraftAccessor", "MultiPlayerGameModeAccessor")
-    }
-}

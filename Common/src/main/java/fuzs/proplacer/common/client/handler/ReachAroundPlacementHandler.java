@@ -1,9 +1,9 @@
-package fuzs.proplacer.client.handler;
+package fuzs.proplacer.common.client.handler;
 
-import fuzs.proplacer.ProPlacer;
-import fuzs.proplacer.client.util.BlockClippingHelper;
-import fuzs.proplacer.config.ClientConfig;
-import fuzs.puzzleslib.api.event.v1.core.EventResult;
+import fuzs.proplacer.common.ProPlacer;
+import fuzs.proplacer.common.client.util.BlockClippingHelper;
+import fuzs.proplacer.common.config.ClientConfig;
+import fuzs.puzzleslib.common.api.event.v1.core.EventResult;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;

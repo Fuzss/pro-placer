@@ -1,9 +1,9 @@
-package fuzs.proplacer.data.client;
+package fuzs.proplacer.common.data.client;
 
-import fuzs.proplacer.ProPlacer;
-import fuzs.proplacer.client.handler.KeyBindingHandler;
-import fuzs.puzzleslib.api.client.data.v2.AbstractLanguageProvider;
-import fuzs.puzzleslib.api.data.v2.core.DataProviderContext;
+import fuzs.proplacer.common.ProPlacer;
+import fuzs.proplacer.common.client.handler.KeyBindingHandler;
+import fuzs.puzzleslib.common.api.client.data.v2.AbstractLanguageProvider;
+import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;
 
 public class ModLanguageProvider extends AbstractLanguageProvider {
 

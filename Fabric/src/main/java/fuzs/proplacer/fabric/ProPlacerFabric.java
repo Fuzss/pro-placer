@@ -1,7 +1,7 @@
 package fuzs.proplacer.fabric;
 
-import fuzs.proplacer.ProPlacer;
-import fuzs.puzzleslib.api.core.v1.ModConstructor;
+import fuzs.proplacer.common.ProPlacer;
+import fuzs.puzzleslib.common.api.core.v1.ModConstructor;
 import net.fabricmc.api.ModInitializer;
 
 public class ProPlacerFabric implements ModInitializer {

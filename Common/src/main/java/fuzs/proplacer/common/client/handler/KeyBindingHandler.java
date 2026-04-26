@@ -1,10 +1,10 @@
-package fuzs.proplacer.client.handler;
+package fuzs.proplacer.common.client.handler;
 
-import fuzs.proplacer.ProPlacer;
-import fuzs.proplacer.config.ClientConfig;
-import fuzs.puzzleslib.api.client.core.v1.context.KeyMappingsContext;
-import fuzs.puzzleslib.api.client.key.v1.KeyActivationHandler;
-import fuzs.puzzleslib.api.client.key.v1.KeyMappingHelper;
+import fuzs.proplacer.common.ProPlacer;
+import fuzs.proplacer.common.config.ClientConfig;
+import fuzs.puzzleslib.common.api.client.core.v1.context.KeyMappingsContext;
+import fuzs.puzzleslib.common.api.client.key.v1.KeyActivationHandler;
+import fuzs.puzzleslib.common.api.client.key.v1.KeyMappingHelper;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.network.chat.CommonComponents;
