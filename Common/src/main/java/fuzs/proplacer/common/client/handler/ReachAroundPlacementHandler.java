@@ -15,6 +15,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Input;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
@@ -124,14 +125,15 @@ public class ReachAroundPlacementHandler {
 
         ItemStack itemInHand = player.getItemInHand(interactionHand);
         int itemCount = itemInHand.getCount();
+        SwingAnimation swingAnimation = itemInHand.getInteractAnimation();
         InteractionResult interactionResult = minecraft.gameMode.useItemOn(player, interactionHand, blockHitResult);
 
         if (interactionResult instanceof InteractionResult.Success success
-                && success.swingSource() == InteractionResult.SwingSource.CLIENT) {
-            player.swing(interactionHand);
+                && success.shouldSwing()) {
+            player.swing(interactionHand, swingAnimation, false);
             if (!itemInHand.isEmpty() && (itemInHand.getCount() != itemCount
                     || minecraft.player.hasInfiniteMaterials())) {
-                minecraft.gameRenderer.itemInHandRenderer.itemUsed(interactionHand);
+                player.itemUsed(interactionHand);
             }
         }
 

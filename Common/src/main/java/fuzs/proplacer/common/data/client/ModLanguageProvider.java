@@ -2,8 +2,8 @@ package fuzs.proplacer.common.data.client;
 
 import fuzs.proplacer.common.ProPlacer;
 import fuzs.proplacer.common.client.handler.KeyBindingHandler;
-import fuzs.puzzleslib.common.api.client.data.v2.AbstractLanguageProvider;
-import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;
+import fuzs.puzzleslib.common.api.client.data.v3.language.AbstractLanguageProvider;
+import fuzs.puzzleslib.common.api.data.v3.core.DataProviderContext;
 
 public class ModLanguageProvider extends AbstractLanguageProvider {
 
@@ -12,9 +12,9 @@ public class ModLanguageProvider extends AbstractLanguageProvider {
     }
 
     @Override
-    public void addTranslations(TranslationBuilder builder) {
-        builder.addKeyCategory(ProPlacer.MOD_ID, ProPlacer.MOD_NAME);
-        builder.add(KeyBindingHandler.KEY_TOGGLE_FAST_PLACEMENT, "Toggle Fast Block Placement");
-        builder.add(KeyBindingHandler.KEY_FAST_PLACEMENT_MESSAGE, "Fast Block Placement: %s");
+    public void addTranslations() {
+        this.addKeyCategory(ProPlacer.MOD_ID, ProPlacer.MOD_NAME);
+        this.add(KeyBindingHandler.KEY_TOGGLE_FAST_PLACEMENT, "Toggle Fast Block Placement");
+        this.add(KeyBindingHandler.KEY_FAST_PLACEMENT_MESSAGE, "Fast Block Placement: %s");
     }
 }
